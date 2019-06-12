@@ -6,9 +6,9 @@ namespace Domain.Entity
 {
     public class PersonOrder : EntityBase
     {
-        public int? PersonID { get; set; }
+        public int? PersonId { get; set; }
         public virtual Person Person { get; set; }
-        public int? OrderID { get; set; }
+        public int? OrderId { get; set; }
         public virtual Order Order { get; set; }
         public PersonRole Role { get; set; }
         public int Weight { get; set; }

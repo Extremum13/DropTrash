@@ -6,7 +6,7 @@ namespace Domain.Entity
 {
     public class Order : EntityBase
     {
-        public virtual ICollection<PersonOrder> PersonFamilies { get; set; }
+        public virtual ICollection<PersonOrder> PersonOrders { get; set; }
         public DateTime Date { get; set; }
         public int Capacity { get; set; }
         public int TotalCost { get; set; }
