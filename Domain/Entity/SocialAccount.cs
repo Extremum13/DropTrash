@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text.RegularExpressions;
-using Domain.Entity.Base;
+﻿using Domain.Entity.Base;
 using Domain.Enum;
 
-namespace Domain.Entity.Base
+namespace Domain.Entity
 {
     public class SocialAccount : EntityBase
     {
