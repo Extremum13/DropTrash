@@ -20,6 +20,9 @@ namespace Data.EF.FluentAPIConfig.Entity
 
             builder.Property(sa => sa.SocialMedia)
                 .IsRequired(true);
+
+            builder.Property(sa => sa.SocialMediaId)
+                .IsRequired(true);
         }
     }
 }
