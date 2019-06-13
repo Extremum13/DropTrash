@@ -9,6 +9,7 @@ namespace Domain.Entity
         public SocialMedia SocialMedia { get; set; }
         public int? PersonId { get; set; }
         public virtual Person Person { get; set; }
+        public string SocialMediaId { get; set; }
     }
 }
 
