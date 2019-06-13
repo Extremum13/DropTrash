@@ -1,0 +1,69 @@
+.prev, .next {
+
+    position: absolute;
+    cursor: pointer;
+    transition: 50ms;
+}
+
+.prev:hover, .next:hover {
+
+    opacity: 0.6;
+}
+
+
+.arrow {
+
+    height: 120px;
+    width: 120px;
+}
+
+.prev {
+
+    left: 10px;
+    top: 410px;
+}
+
+.next {
+
+    right: 10px;
+    top: 410px;
+}
+
+.dots {
+
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+
+    top: 890px;
+    left: 590px;
+
+    width: 500px;
+    justify-content: space-between;
+
+
+}
+
+.dot {
+
+    width: 23px;
+    height: 23px;
+
+    border-radius: 100%;
+
+    transition: 50ms;
+    cursor: pointer;
+    
+    background-color: #ffffff;
+}
+
+.dot:nth-child(1) {
+
+    background-color: #000000;
+}
+
+.dot:hover {
+
+    background-color:  #566573;
+}
