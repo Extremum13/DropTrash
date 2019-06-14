@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Business.EntityService.Interface
 {
-    class IPersonService
+    public interface IPersonService
     {
     }
 }
