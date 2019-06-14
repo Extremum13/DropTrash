@@ -43,7 +43,9 @@ function showSlides(n) {
 }
 
 function showSlidesT() {
+
     var slides = document.getElementsByClassName("slides");
+
     if (counter > slides.length) {
         counter = 0;
     }

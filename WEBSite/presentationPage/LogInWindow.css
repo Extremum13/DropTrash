@@ -1,0 +1,108 @@
+#LogInWindow {
+
+    position: absolute;
+
+    padding: 15px;
+
+    top: 63px;
+    right: 0px;
+
+    width: 463px;
+    height: 328px;
+    border: solid 1px #000000;
+    background-color: #ffffff;
+
+    border-top-left-radius: 38px;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+
+}
+
+.LogInField {
+
+    margin-bottom: 30px;
+}
+
+.LogInField > div {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.LogInField > p {
+
+    width: 93px;
+    height: 40px;
+    font-family: 'Comfortaa', bold;
+    font-size: 29px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.LogInField > div > input {
+
+    width: 398px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 2px #000000;
+    background-color: #ffffff;
+    text-indent: 5px;
+    font-size: 25px;
+}
+
+.errorLogIn {
+
+    width: 25px;
+    height: 25px;
+    border: solid 1px #000000;
+    background-color: #c33737;
+
+    border-radius: 100%;
+
+    margin-left: 20px;
+}
+
+.PasswordField {
+
+    margin-bottom: 30px;
+}
+
+.PasswordField > div {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.PasswordField > p {
+
+    width: 93px;
+    height: 40px;
+    font-family: 'Comfortaa', bold;
+    font-size: 29px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+
+.PasswordField > div > input {
+
+    width: 398px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 2px #000000;
+    background-color: #ffffff;
+    text-indent: 5px;
+    font-size: 25px;
+}
+
