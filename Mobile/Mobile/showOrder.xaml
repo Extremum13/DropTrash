@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.showOrder"
+             Title="Order">
+
+    <ContentPage.Content>
+        
+        <StackLayout x:Name="Stack"  Padding = "15,30,30,30">
+            <Label x:Name = "numberOfOrder" Text = "Заказ №" HorizontalOptions = "Center"></Label>
+            <Label x:Name = "dateOfOrder" Text = "Дата выполнения" HorizontalOptions = "Start"></Label>
+            <Label x:Name = "addressOfOrder" Text = "Адресc " HorizontalOptions = "Start"></Label>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
