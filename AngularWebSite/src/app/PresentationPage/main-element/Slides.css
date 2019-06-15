@@ -1,0 +1,93 @@
+#scopeSlides {
+
+    width: 100%;
+    height: 830px;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 30px;
+    margin-bottom: 45px;
+
+    z-index: 0;
+}
+
+.OV {
+
+    width: 11px;
+    height: 88%;
+    background-color: #4ba475;
+
+    position: absolute;
+}
+
+.firstF {
+    right: 0px;
+}
+
+.secondF {
+    left: 0px;
+}
+
+.prev, .next {
+
+    position: absolute;
+    cursor: pointer;
+    transition: 50ms;
+}
+
+.prev:hover, .next:hover {
+
+    opacity: 0.6;
+}
+
+
+.arrow {
+
+    height: 120px;
+    width: 120px;
+}
+
+.prev {
+
+    left: 10px;
+    top: 410px;
+}
+
+.next {
+
+    right: 10px;
+    top: 410px;
+}
+
+.dots {
+
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+
+    top: 890px;
+    left: 590px;
+
+    width: 500px;
+    justify-content: space-between;
+}
+
+.dot {
+
+    width: 23px;
+    height: 23px;
+
+    border-radius: 100%;
+
+    transition: 100ms;
+    cursor: pointer;
+
+    background-color: #ffffff;
+}
+
+.dot:hover {
+
+  box-shadow: inset 0px 0px 30px 30px rgba(0, 0, 0, 0.9);
+}

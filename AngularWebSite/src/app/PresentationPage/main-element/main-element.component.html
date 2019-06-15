@@ -1,0 +1,124 @@
+<main>
+
+  <div id="scopeSlides">
+
+   <app-slide-generate></app-slide-generate>
+
+    <a class="prev" onclick="plusSlides(-1)"><img class="arrow" [src]="imagesPath[0].path"></a>
+    <a class="next" onclick="plusSlides(1)"><img class="arrow" [src]="imagesPath[1].path"></a>
+
+    <div class="OV firstF"></div>
+    <div class="OV secondF"></div>
+
+  </div>
+
+  <div class="dots">
+
+    <div class="dot" onclick="currentSlide(1)"></div>
+    <div class="dot" onclick="currentSlide(2)"></div>
+    <div class="dot" onclick="currentSlide(3)"></div>
+    <div class="dot" onclick="currentSlide(4)"></div>
+    <div class="dot" onclick="currentSlide(5)"></div>
+    <div class="dot" onclick="currentSlide(6)"></div>
+    <div class="dot" onclick="currentSlide(7)"></div>
+    <div class="dot" onclick="currentSlide(8)"></div>
+    <div class="dot" onclick="currentSlide(9)"></div>
+    <div class="dot" onclick="currentSlide(10)"></div>
+    <div class="dot" onclick="currentSlide(11)"></div>
+    <div class="dot" onclick="currentSlide(12)"></div>
+    <div class="dot" onclick="currentSlide(13)"></div>
+
+  </div>
+
+  <div class="quote">Якість — це коли все зроблено правильно, навіть якщо ніхто не перевіряє.</div>
+
+  <div class="mainData">
+
+    <div class="logoAndLogButt">
+
+      <div><img [src]="imagesPath[2].path"></div>
+      <div>
+        <p>РЕЄСТРАЦІЯ</p>
+        <p>ВХІД</p>
+      </div>
+
+    </div>
+
+    <div class="textTable">
+
+      <div>
+
+        <div>
+
+          <p>Тверде сміття:</p>
+
+          <ul>
+            <li>- уламки бетону;</li>
+            <li>- залишки цеглин;</li>
+            <li>- кам’яні глиби;</li>
+            <li>- шматки асфальту;</li>
+            <li>- всі види деревини;</li>
+            <li>- скло;</li>
+            <li>- металобрухт.</li>
+          </ul>
+
+        </div>
+
+        <div class="verLine"></div>
+
+        <div>
+
+          <p>Відходи в рідкому стані:</p>
+
+          <ul>
+            <li>- масла;</li>
+            <li>- лаки;</li>
+            <li>- фарби;</li>
+            <li>- клей;</li>
+            <li>- смола;</li>
+            <li>- ацетон;</li>
+            <li>- мастильні речовини;</li>
+            <li>- захисні покриття.</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div id="horLine"></div>
+
+      <div>
+
+        <div>
+
+          <p>Сипуче сміття:</p>
+
+          <ul>
+            <li>- пісок;</li>
+            <li>- щебінь;</li>
+            <li>- гравій;</li>
+            <li>- чорнозем;</li>
+            <li>- ґрунт;</li>
+            <li>- глина.</li>
+          </ul>
+
+        </div>
+
+        <div class="verLine secHorLine"></div>
+
+        <div>
+
+          <p>Сміття іншого виду за домовленістю</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <app-log-in-window></app-log-in-window>
+  <app-registration-window></app-registration-window>
+
+</main>

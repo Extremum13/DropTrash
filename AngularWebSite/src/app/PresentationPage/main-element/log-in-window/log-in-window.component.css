@@ -1,0 +1,166 @@
+#LogInWindow {
+
+  position: absolute;
+
+  padding: 15px;
+
+  top: 63px;
+  right: 0px;
+
+  width: 230px;
+  height: 228px;
+  background-color: #ffffff;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 38px;
+  border-bottom-left-radius: 38px;
+  border-bottom-right-radius: 38px;
+
+}
+
+.lIn {
+
+  margin-bottom: 20px;
+}
+
+.lIn > div {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lIn > p {
+
+  font-family: Avenir;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+
+.lIn > div > input {
+
+  width: 200px;
+  height: 25px;
+  border-radius: 10px;
+  border: solid 2px #000000;
+  background-color: #ffffff;
+  text-indent: 5px;
+  font-size: 18px;
+
+  outline: none;
+}
+
+.errorLogIn {
+
+  width: 15px;
+  height: 15px;
+  border: solid 1px #000000;
+  background-color: #c33737;
+
+  border-radius: 100%;
+
+  margin-left: 10px;
+}
+
+.PasswordField {
+
+  margin-bottom: 10px;
+}
+
+.JoinButton {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.JoinButton > img {
+
+  width: 40px;
+  height: auto;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.JoinButton > img:nth-child(2) {
+
+  width: 50px;
+  height: auto;
+}
+
+.JoinButton > button {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 109px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #000000;
+  transition: 200ms;
+  color: #ffffff;
+  font-family: Avenir;
+  font-weight: bold;
+  font-size: 20px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.JoinButton > img:hover, .JoinButton > a:hover {
+
+  opacity: 0.7;
+}
+
+.contLine {
+
+  display: flex;
+  justify-content: center;
+}
+
+.horLineLogIn {
+
+  height: 1px;
+  width: 230px;
+
+  margin-top: 5px;
+
+  background-color: #000000;
+}
+
+.RegRestore {
+
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+
+  font-family: Avenir;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.RegRestore > a:hover {
+
+  opacity: 0.7;
+}

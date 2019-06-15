@@ -1,0 +1,264 @@
+#RegistrationWindow {
+
+  position: absolute;
+
+  top: 100px;
+  left: calc((100% - 765px) / 2);
+
+  width: 765px;
+  height: 652px;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 1px #000000;
+  background-color: #ffffff;
+
+}
+
+.headReg {
+
+  margin-top: 5px;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.headReg > p {
+
+  width: 160px;
+  height: 34px;
+  font-family: Avenir;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.horLine {
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+
+  width: 98%;
+
+  height: 2px;
+  background-color: #000000;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.headReg > div {
+
+  width: 99%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headReg > div > img {
+
+  width: 20px;
+  height: auto;
+
+  transition: 100ms;
+
+  cursor: pointer;
+}
+
+.headReg > div > img:hover {
+  opacity: 0.7;
+}
+
+.mainInfo {
+
+  width: 99%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+}
+
+.nameLastFirst {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.nameLastFirst > div {
+
+  width: 100%;
+
+  margin-left: 5px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nameLastFirst > div:nth-child(2) {
+
+  width: 100%;
+
+  margin-left: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nameOfFieldReg {
+
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.inputReg {
+
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  border: solid 2px #000000;
+  background-color: #ffffff;
+
+  text-indent: 5px;
+
+  font-size: 18px;
+
+  margin-top: 5px;
+
+  outline: none;
+}
+
+.circleError {
+
+  display: flex;
+  align-self: center;
+
+  width: 19px;
+  height: 19px;
+  border: solid 1px #000000;
+  border-radius: 100%;
+  margin-left: 10px;
+
+  background-color: #c33737;;
+}
+
+.info {
+
+  width: 99.3%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+.info > div {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 490px;
+}
+
+.inputInfo {
+
+  display: flex;
+  justify-self: flex-end;
+
+  width: 90%;
+
+  height: 40px;
+  border-radius: 10px;
+  border: solid 2px #000000;
+  background-color: #ffffff;
+
+  text-indent: 5px;
+
+  font-size: 18px;
+
+  margin-top: 5px;
+
+  outline: none;
+}
+
+.footerReg {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+.footerReg > input:first-child {
+
+  width: 238px;
+}
+
+.footerReg > input:last-child {
+
+  width: 500px;
+}
+
+.footerReg > input {
+
+  width: 238px;
+  height: 52px;
+  border-radius: 15px;
+  background-color: #000000;
+
+  text-transform: uppercase;
+
+  font-family: Avenir;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.footerReg > input:hover {
+
+  color: #000000;
+  background-color: #ffffff;
+  border: solid black 5px;
+}

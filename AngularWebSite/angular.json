@@ -84,6 +84,7 @@
               "src/assets"
             ],
             "styles": [
+              "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -116,5 +117,5 @@
         }
       }
     }},
-  "defaultProject": "AngularWebSite"
+  "defaultProject": "DROP|TRASH"
 }

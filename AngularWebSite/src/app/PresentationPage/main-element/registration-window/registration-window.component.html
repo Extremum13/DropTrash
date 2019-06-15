@@ -1,0 +1,63 @@
+<div id="RegistrationWindow">
+
+  <div class="headReg">
+
+    <div>
+      <img [src]="helpImagePath" alt="close" title="Допомога">
+      <img [src]="closeImagePath" alt="registration" title="Закрити">
+    </div>
+
+    <p>РЕЄСТРАЦІЯ</p>
+
+  </div>
+
+
+  <div class="horLine">
+    <div class="line"></div>
+  </div>
+
+
+  <div class="mainScopeReg">
+
+    <div class="mainInfo">
+
+      <div class="nameLastFirst" *ngFor="let userInfo of regMainData">
+
+        <div>
+
+          <p class="nameOfFieldReg">{{userInfo.data}}</p>
+
+        </div>
+
+        <div>
+
+          <input type="text" class="inputReg">
+          <div class="circleError"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="info" *ngFor="let userInfo of regData">
+
+        <p class="nameOfFieldReg">{{userInfo.data}}</p>
+
+      <div>
+        <input class="inputInfo" type="text">
+        <div class="circleError"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footerReg">
+
+    <input type="button" value="закрити">
+    <input type="submit" value="ЗАРЕЄСТРУВАТИСЯ">
+
+  </div>
+
+</div>
