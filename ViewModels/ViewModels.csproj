@@ -6,7 +6,8 @@
 
   <ItemGroup>
     <Folder Include="AppViewModels\OrderViewModels\" />
-    <Folder Include="AppViewModels\UserViewModels\AuthorizationViewModels\" />
+    <Folder Include="AppViewModels\UserViewModels\ClientViewModels\" />
+    <Folder Include="AppViewModels\UserViewModels\DriverViewModels\" />
   </ItemGroup>
 
 </Project>
