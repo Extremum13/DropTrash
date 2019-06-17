@@ -18,7 +18,7 @@ namespace Data.EF.FluentAPIConfig.Entity
             builder.HasOne(po => po.Order)
                 .WithMany(p => p.PersonOrders)
                 .HasForeignKey(po => po.OrderId)
-                .IsRequired(true);
+                .IsRequired(false);
 
             builder.HasMany(po => po.Messages)
                 .WithOne(m => m.PersonOrder)
@@ -35,7 +35,7 @@ namespace Data.EF.FluentAPIConfig.Entity
                 .IsRequired(true);
 
             builder.Property(po => po.Address)
-                .IsRequired(true);
+                .IsRequired(false);
         }
     }
 }

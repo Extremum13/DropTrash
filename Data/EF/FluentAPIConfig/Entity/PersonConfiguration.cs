@@ -12,7 +12,7 @@ namespace Data.EF.FluentAPIConfig.Entity
 
             builder.HasMany(p => p.PersonOrders)
                 .WithOne(po => po.Person)
-                .HasForeignKey(po => po.PersonID)
+                .HasForeignKey(po => po.PersonId)
                 .IsRequired(true);
 
             builder.HasMany(p => p.SocialAccounts)

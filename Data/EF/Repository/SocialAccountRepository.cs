@@ -13,5 +13,7 @@ namespace Data.EF.Repository
         public SocialAccountRepository(DbContext dbContext) : base(dbContext)
         {
         }
+
+        public CheckIfAccountExists()
     }
 }
