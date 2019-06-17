@@ -1,11 +1,13 @@
 ﻿using Business.EntityService.Interface;
 using Data.EF.UnitOfWork.Interface;
 using Domain.Entity;
+using Domain.Enum;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ViewModels.AppViewModels.UserViewModels.AuthorizationViewModels;
 
 namespace API.Controllers
 {
@@ -23,9 +25,37 @@ namespace API.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public Person GetPersonById(int id)
+        public ResponsePersonalInformation GetPersonById(int id)
         {
-            return this.unitOfWork.PersonRepository.GetById(id);
+            var person = this.unitOfWork.PersonRepository.GetById(id);
+            ResponsePersonalInformation personalInformation = 
+                new ResponsePersonalInformation { BirthDay = person.Birthday.Day, BirthMonth = person.Birthday.Month, BirthYear = person.Birthday.Year, CanBeDriver = person.CanBeDriver, FirstName = person.FirstName, SecondName = person.SecondName };
+
+            return personalInformation;
+        }
+
+        [HttpPost]
+        [Route("create")]
+        public ActionResult CreatePerson(RequestSocialViewModel socialViewModel)
+        {
+            SocialMedia socialMedia;
+            switch(socialViewModel.SocialMedia)
+            {
+                case (ViewModels.Enum.SocialMedia.Facebook):
+                    socialMedia = SocialMedia.Facebook;
+                    break;
+                case (ViewModels.Enum.SocialMedia.Google):
+                    socialMedia = SocialMedia.Google;
+                    break;
+                default:
+                    socialMedia = SocialMedia.Google;
+                    break;
+            }
+
+            DateTime dateTime = new DateTime(socialViewModel.BirthYear, socialViewModel.BirthMonth, socialViewModel.BirthYear);
+            Person person = this.authorizationService.CreatePersonBySocial(socialViewModel.SocialId, socialMedia, socialViewModel.FirstName, socialViewModel.SecondName, dateTime, socialViewModel.CanBeDriver);
+                        
+            return this.Ok(person);
         }
     }
 }
