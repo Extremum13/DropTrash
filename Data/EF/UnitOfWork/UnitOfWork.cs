@@ -7,6 +7,7 @@ namespace Data.EF.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         private DropTrashContext dbContext;
+
         private IPersonRepository personRepository;
         private IOrderRepository orderRepository;
         private IPersonOrderRepository personOrderRepository;
