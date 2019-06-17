@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+                  x:Class="Mobile.MainPage"
+                  Title="TrashProject">
+    
+    
+    
+    <MasterDetailPage.Master>
+        <ContentPage Title="TrashProj" BackgroundColor="LightGreen">
+            <ContentPage.Content Title="TrashProject" BackgroundColor="LawnGreen">
+                <StackLayout Padding="5,30,5,5">
+                    <Button x:Name="Orders" Text="Закази" Clicked="Orders_Clicked"></Button>
+                    <Button x:Name="Chat" Text="Доступные чаты" Clicked="Chat_Clicked"></Button>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+
+                <maps:Map x:Name="tMap" ></maps:Map>
+
+            </ContentPage.Content>
+
+
+
+        </ContentPage>
+
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

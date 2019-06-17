@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{C6176A5B-064A-4B4B-B543-9E3CA12D221E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{449E7254-D284-40D9-ADB2-E0180BC5B00C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mobile", "Mobile\Mobile\Mobile.csproj", "{8D271E3B-BD33-4C86-A76E-959C7389D8F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile.Android", "Mobile\Mobile.Android\Mobile.Android.csproj", "{C6064539-E52E-4417-BD6F-E298DF153575}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +37,16 @@ Global
 		{C6176A5B-064A-4B4B-B543-9E3CA12D221E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6176A5B-064A-4B4B-B543-9E3CA12D221E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6176A5B-064A-4B4B-B543-9E3CA12D221E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{449E7254-D284-40D9-ADB2-E0180BC5B00C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{449E7254-D284-40D9-ADB2-E0180BC5B00C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{449E7254-D284-40D9-ADB2-E0180BC5B00C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{449E7254-D284-40D9-ADB2-E0180BC5B00C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D271E3B-BD33-4C86-A76E-959C7389D8F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D271E3B-BD33-4C86-A76E-959C7389D8F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D271E3B-BD33-4C86-A76E-959C7389D8F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D271E3B-BD33-4C86-A76E-959C7389D8F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6064539-E52E-4417-BD6F-E298DF153575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6064539-E52E-4417-BD6F-E298DF153575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6064539-E52E-4417-BD6F-E298DF153575}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C6064539-E52E-4417-BD6F-E298DF153575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6064539-E52E-4417-BD6F-E298DF153575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6064539-E52E-4417-BD6F-E298DF153575}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
