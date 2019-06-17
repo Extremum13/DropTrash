@@ -1,5 +1,6 @@
 ﻿using Business.EntityService.Interface;
 using Data.EF.UnitOfWork.Interface;
+using Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace API.Controllers
 {
+    [Route("api/[controller]")]
     public class AuthorizationController : Controller
     {
         private IAuthorizationService authorizationService;
@@ -19,6 +21,11 @@ namespace API.Controllers
             this.unitOfWork = unitOfWork;
         }
 
-
+        [HttpGet]
+        [Route("{id:int}")]
+        public Person GetPersonById(int id)
+        {
+            return this.unitOfWork.PersonRepository.GetById(id);
+        }
     }
 }
