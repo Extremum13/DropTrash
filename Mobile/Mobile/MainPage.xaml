@@ -2,12 +2,11 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+                    xmlns:local="clr-namespace:Mobile;assembly=Mobile"
                   x:Class="Mobile.MainPage"
                   Title="TrashProject">
-    
-    
-    
-    <MasterDetailPage.Master>
+
+        <MasterDetailPage.Master>
         <ContentPage Title="TrashProj" BackgroundColor="LightGreen">
             <ContentPage.Content Title="TrashProject" BackgroundColor="LawnGreen">
                 <StackLayout Padding="5,30,5,5">
@@ -23,7 +22,7 @@
         <ContentPage>
             <ContentPage.Content>
 
-                <maps:Map x:Name="tMap" ></maps:Map>
+                <local:CustomMap x:Name="customMap" MapType="Street" WidthRequest="{x:Static local:App.ScreenWidth}" HeightRequest="{x:Static local:App.ScreenHeight}"  />
 
             </ContentPage.Content>
 

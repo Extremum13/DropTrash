@@ -14,7 +14,6 @@ namespace Mobile.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            int x;
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

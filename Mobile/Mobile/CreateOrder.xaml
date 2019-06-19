@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.CreateOrder">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <!--<Label Text="Username" />
+            <Entry x:Name="usernameEntry" Placeholder="username" />
+            <Label Text="Password" />
+            <Entry x:Name="passwordEntry" IsPassword="true" />
+            <Label Text="Email address" />
+            <Entry x:Name="emailEntry" />
+            <Label Text="FIO" />
+            <Entry x:Name="FIO" />
+            <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" />
+            <Label x:Name="messageLabel" />
+            <Label Text="Username" />
+            <Entry x:Name="usernameEntry" Placeholder="username" />
+            <Label Text="Password" />
+            <Entry x:Name="passwordEntry" IsPassword="true" />
+            <Label Text="Email address" />
+            <Entry x:Name="emailEntry" />
+            <DatePicker x:Name="Date"></DatePicker>-->
+            
+        </StackLayout>
+       
+
+    </ContentPage.Content>
+    
+</ContentPage>

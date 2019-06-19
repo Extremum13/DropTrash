@@ -13,103 +13,123 @@ namespace Mobile
 	[XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
-      
-
+        public static List<Order> AllOrders = new ListOfOrder().orders;
+        public static int selectedOrder;
+        public static User user;
         public MainPage()
         {
             IsPresented = true;
 
+            
             InitializeComponent();
 
-
-
-        }
-
-
-        private void AddPinsToMap(List<Pin> pins)
-        {
-            for (int i = 0; i < pins.Count(); i++)
-            {
-                if (!tMap.Pins.Contains(pins[i]))
-                {
-                    tMap.Pins.Add(pins[i]);
-                    pins[i].Clicked += Pin_Clicked;
-                }
-            }
-        }
-
-        private List<Pin> CreatePin(List<int> orders)
-        {
-            List<Pin> pins = new List<Pin>();
-            for (float i = 0;i<orders.Count();i++) {
-
-                    Pin temppin = new Pin()                         
-                {
-                    Label = "Content "+ i,
-                    Position = new Position(50, 36.14+i/100)
-                };
-                pins.Add(temppin);
-
-            }
-            return pins;
-
-        }
-
-        private async void Pin_Clicked(object sender, EventArgs e)
-        {
-            var temp = sender as Pin;
-            await DisplayAlert("Title", temp.Label, "can");
-            await Navigation.PushAsync(new showOrder());
-            IsPresented = false;
 
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
+            var ter = new ListOfOrder().orders;
             List<int> tempArr = new List<int> { 5, 3, 2, 1, 4 };
-
-
-
-            tMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(50, 36.15), Distance.FromKilometers(15)));
+            customMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(50, 36.15), Distance.FromKilometers(15)));
             // CreatePin();
-            List<Pin> pins  = CreatePin(tempArr);
-            
-
-            Pin pin1 = new Pin()
-            {
-                Label = "Content111",
-                Position = new Position(50, 36.14)
-            };
-            Pin pin2 = new Pin()
-            {
-                Label = "Content222",
-                Position = new Position(50, 36.17)
-            };
-            Pin pin3 = new Pin()
-            {
-                Label = "Content333",
-                Position = new Position(50, 36.19)
-            };
-
-            pins.Add(pin1);
-            pins.Add(pin2);
-            pins.Add(pin3);
-
-            //tMap.Pins.Add(pin1);
-            //tMap.Pins.Add(pin2);
-            //tMap.Pins.Add(pin3);
-
-            //pins[0].Clicked += Pin_Clicked;
-            //pins[1].Clicked += Pin_Clicked;
-            //pins[2].Clicked += Pin_Clicked;
-
-
+            List<CustomPin> pins = CreateCustomPin(AllOrders);
             AddPinsToMap(pins);
+
         }
 
-        
+        private void AddPinsToMap(List<CustomPin> pins)
+        {
+            for (int i = 0; i < pins.Count(); i++)
+            {
+                if (!customMap.Pins.Contains(pins[i]))
+                {
+                    customMap.Pins.Add(pins[i]);
+                    pins[i].Clicked += CustomPin_Cliked;
+                }
+            }
+        }
+
+        private List<CustomPin> CreateCustomPin(List<int> orders)
+        {
+            List<CustomPin> pins = new List<CustomPin>();
+            for (float i = 0;i<orders.Count();i++) {
+
+                    CustomPin temppin = new CustomPin()
+                    {
+                        Type = PinType.Place,
+                        Position = new Position(50, 36.14 + i / 100),
+                        Label =  "Номер заказа: "+i+ " Состояние: "+ Convert.ToString(i),
+
+                        Address = "394 Pacific Ave, San Francisco CA",
+                        Id = "Xamarin",
+
+                };
+                pins.Add(temppin);
+               // temppin.Label = "KULLLL";
+
+            }
+            return pins;
+
+        }
+        private List<CustomPin> CreateCustomPin(List<Order> orders)
+        {
+            List<CustomPin> pins = new List<CustomPin>();
+            for (int i = 0; i < orders.Count(); i++)
+            {
+
+                string[] str = orders[i].coord.Split(' ');
+
+                double X = Double.Parse(str[0]);
+                double y = Double.Parse(str[1]);
+
+                var Position = new Position(Convert.ToDouble(str[0]), Convert.ToDouble(str[1]));
+
+                CustomPin temppin = new CustomPin()
+                {
+                    Type = PinType.Place,
+                    Position = new Position(Double.Parse(str[0]), Double.Parse(str[1])),
+                    Label = "Номер заказа: " + orders[i].ordernum + " Состояние: " + Convert.ToString(orders[i].type),
+                    order = orders[i],
+                    Address = orders[i].address,
+                    Id = "Xamarin",
+                };
+                pins.Add(temppin);
+                // temppin.Label = "KULLLL";
+
+            }
+            return pins;
+
+        }
+
+
+
+
+
+        private async void CustomPin_Cliked(object sender, System.EventArgs e)
+        {
+            var temp = sender as CustomPin;
+            int i = 0;
+
+            //string[] tempNum = temp.Label.Split(' ');
+            //Order ord = AllOrders.Find(order=> order.ordernum==Convert.ToInt32(tempNum[2]));
+            //await DisplayAlert("АУ", "ААА", "Ау");
+            foreach (var k in AllOrders)
+            {
+                
+                if (k.ordernum.Equals(temp.order.ordernum))
+                {
+                    selectedOrder = i;
+                    await Navigation.PushAsync(new showOrder() { id = temp.order.ordernum });
+                    break;
+                }
+                i++;
+            }
+            IsPresented = false;
+            temp = null;
+            sender = null;
+            i = 0;
+        }
         private  void Orders_Clicked(object sender, EventArgs e)
         {
 
@@ -121,6 +141,22 @@ namespace Mobile
             IsPresented = false;
 
         }
-       
+
+        
+
+
+
+
+
+        //private async void Pin_Clicked(object sender, EventArgs e)
+        //{
+        //    var temp = sender as Pin;
+        //    await DisplayAlert("Title", temp.Label, "can");
+
+        //    await Navigation.PushAsync(new showOrder());
+        //    IsPresented = false;
+
+        //}
+
     }
 }
